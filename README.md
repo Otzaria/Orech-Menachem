@@ -6,7 +6,7 @@
 
 קישור קבוע לגרסה האחרונה:
 
-**https://github.com/palmoni5/menachem-editor/releases/latest/download/Menachem-Editor.dotm**
+**https://github.com/Otzaria/Orech-Menachem/releases/latest/download/Orech-Menachem.dotm**
 
 ## עדכון גרסה
 

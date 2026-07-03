@@ -16,7 +16,7 @@ jobs:
       # GitHub release assets don't support Hebrew/spaces in filenames,
       # so the asset is uploaded under an ASCII name for a stable download URL
       - name: Prepare asset
-        run: cp "עורך מנחם.dotm" "Menachem-Editor.dotm"
+        run: cp "עורך מנחם.dotm" "Orech-Menachem.dotm"
 
       - name: Create release
         uses: softprops/action-gh-release@v2
@@ -24,4 +24,4 @@ jobs:
           tag_name: v1.0.${{ github.run_number }}
           name: עורך מנחם v1.0.${{ github.run_number }}
           make_latest: true
-          files: Menachem-Editor.dotm
+          files: Orech-Menachem.dotm
