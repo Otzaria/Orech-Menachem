@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # GitHub release assets don't support Hebrew/spaces in filenames,
+      # so the asset is uploaded under an ASCII name for a stable download URL
+      - name: Prepare asset
+        run: cp "עורך מנחם.dotm" "Menachem-Editor.dotm"
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: עורך מנחם v1.0.${{ github.run_number }}
+          make_latest: true
+          files: Menachem-Editor.dotm
